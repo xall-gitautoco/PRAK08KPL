@@ -23,6 +23,9 @@ public class Program
         }
 
         int inputBiaya = Convert.ToInt32(Console.ReadLine());
+        Konf.tranfer.threshold = 25000000;
+        Konf.tranfer.low_fee = 6500;
+        Konf.tranfer.high_fee = 15000;
 
         if (inputBiaya <= Konf.tranfer.threshold) {
             inputBiaya = inputBiaya + Konf.tranfer.low_fee;
@@ -33,11 +36,11 @@ public class Program
 
         if (inputLang == "en")
         {
-            Console.WriteLine("Trasnfer fee = " + Konf.tranfer.threshold + "dan ");
+            Console.WriteLine("Trasnfer fee = " + Konf.tranfer.threshold + "and Total amount :" + inputBiaya);
         }
         else if (inputLang == "id")
         {
-            Console.WriteLine("Masukkan jumlah uang yang akan di-trasnfer");
+            Console.WriteLine("Biaya trasnfer =" + Konf.tranfer.threshold + "dan Total Biaya : " + inputBiaya);
         }
     }
        
