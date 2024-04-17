@@ -117,7 +117,7 @@ public class Program
         public Config ReadConfigFile()
         {
             String configJsonData = File.ReadAllText(filePath);
-            bankConfig = JsonSerializer.Deserialize<Config>{configJsonData};
+            bankConfig = JsonSerializer.Deserialize<Config>(configJsonData);
             return bankConfig;
         }
 
